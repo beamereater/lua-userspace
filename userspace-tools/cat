@@ -1,0 +1,19 @@
+#!/bin/lua
+local lines = {}
+if #arg < 1 then
+	while true do
+		local line = io.read()
+		if line == "" then break end
+		table.insert(lines,line)
+	end
+else
+	for i,v in pairs(arg) do
+		if i < 0 then break end
+		for j in io.lines(v) do
+			table.insert(lines,j)
+		end
+	end
+end
+for k=1,#lines do
+	print(lines[k])
+end
