@@ -1,4 +1,4 @@
-#!/bin/lua
+#!/bin/lua-userspace
 local lines = {}
 if #arg < 1 then
 	while true do
