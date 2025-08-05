@@ -1,0 +1,3 @@
+#!/bin/lua-userspace
+if #arg < 1 then os.exit() end
+sleep(tonumber(arg[1]))
