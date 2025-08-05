@@ -1,0 +1,18 @@
+#!/bin/lua-userspace
+if #arg < 1 then os.exit() end
+local procstr = ""
+for i=1,#arg do
+	procstr = procstr.." "..arg[i]
+end
+local realstart = gettime()
+local start = clock()
+--os.execute(procstr)
+local proc = io.popen(procstr,"r")
+--local finish = clock()
+for i in proc:lines() do
+	print(i)
+end
+local finish = clock()
+local realtime = gettime()-realstart
+proc:close()
+print("\nreal: "..realtime.."\nsys: "..(finish-start)/CLOCKS_PER_SEC)
