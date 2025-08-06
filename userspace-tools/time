@@ -1,4 +1,4 @@
-#!/bin/lua-userspace
+#!/usr/bin/env lua-userspace
 if #arg < 1 then os.exit() end
 local procstr = ""
 for i=1,#arg do

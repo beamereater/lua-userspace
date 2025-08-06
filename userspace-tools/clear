@@ -1,2 +1,2 @@
-#!/bin/lua-userspace
+#!/usr/bin/env lua-userspace
 clear()
